@@ -1,10 +1,11 @@
 import React, { Fragment } from "react";
+import styles from "./Layout.module.css";
 
 const layout = (props) => (
-  <React.Fragment>
+  <Fragment>
     <div>Toolbar, SideDrawer, Backdrop</div>
-    <main>{props.children}</main>
-  </React.Fragment>
+    <main className={styles.Content}>{props.children}</main>
+  </Fragment>
 );
 
 export default layout;
