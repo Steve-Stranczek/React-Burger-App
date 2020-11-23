@@ -15,6 +15,10 @@ class ContactData extends Component {
           placeholder: "Your Name",
         },
         value: "",
+        validation: {
+          required: true,
+        },
+        valid: false,
       },
       street: {
         elementType: "input",
@@ -23,6 +27,10 @@ class ContactData extends Component {
           placeholder: "Your Street",
         },
         value: "",
+        validation: {
+          required: true,
+        },
+        valid: false,
       },
       zipCode: {
         elementType: "input",
@@ -31,6 +39,10 @@ class ContactData extends Component {
           placeholder: "Your Zip",
         },
         value: "",
+        validation: {
+          required: true,
+        },
+        valid: false,
       },
       country: {
         elementType: "input",
@@ -39,6 +51,10 @@ class ContactData extends Component {
           placeholder: "Your County",
         },
         value: "",
+        validation: {
+          required: true,
+        },
+        valid: false,
       },
       email: {
         elementType: "input",
@@ -47,6 +63,10 @@ class ContactData extends Component {
           placeholder: "Your Email",
         },
         value: "",
+        validation: {
+          required: true,
+        },
+        valid: false,
       },
       deliveryMethod: {
         elementType: "select",
@@ -88,6 +108,8 @@ class ContactData extends Component {
         console.log(error);
       });
   };
+
+  checkValidity = () => {};
 
   inputChangedHandler = (event, inputIdentifier) => {
     const updatedForm = {
