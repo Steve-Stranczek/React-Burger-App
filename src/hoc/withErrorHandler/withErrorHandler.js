@@ -1,4 +1,4 @@
-import react, { Component, Fragment } from "react";
+import React, { Component, Fragment } from "react";
 
 import Modal from "../../components/UI/Modal/Modal";
 

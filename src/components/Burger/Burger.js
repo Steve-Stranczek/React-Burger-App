@@ -1,5 +1,3 @@
-import { array } from "prop-types";
-import react, { Fragment } from "react";
 import classes from "./Burger.module.css";
 import BurgerIngredient from "./BurgerIngredient/BurgerIngredient";
 
