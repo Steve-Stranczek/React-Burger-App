@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import Button from "../../../components/UI/Button/Button";
 import classes from "./ContactData.module.css";
+<<<<<<< HEAD
 import axios from "../../../Axios/axios-oders";
+=======
+import axios from "../../../Axios/axios-orders";
+>>>>>>> 15d508dc4e6ba5041d004d7820019a3ecbf2e2eb
 import Spinner from "../../../components/UI/Spinner/Spinner";
 import Input from "../../../components/UI/Forms/Input/Input";
 
@@ -81,8 +85,12 @@ class ContactData extends Component {
             { value: "cheapest", displayValue: "Cheapest" },
           ],
         },
+<<<<<<< HEAD
         value: "fastest",
         validation: {},
+=======
+        value: "",
+>>>>>>> 15d508dc4e6ba5041d004d7820019a3ecbf2e2eb
         valid: true,
       },
     },
@@ -144,7 +152,11 @@ class ContactData extends Component {
     for (let identifier in updatedForm) {
       formIsValid = updatedForm[identifier].valid && formIsValid;
     }
+<<<<<<< HEAD
     this.setState({ orderForm: updatedForm, formIsValid: true });
+=======
+    this.setState({ orderForm: updatedForm, formIsValid: formIsValid });
+>>>>>>> 15d508dc4e6ba5041d004d7820019a3ecbf2e2eb
   };
 
   render() {
