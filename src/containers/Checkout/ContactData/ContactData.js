@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Button from "../../../components/UI/Button/Button";
 import classes from "./ContactData.module.css";
-import axios from "../../../Axios/axios-orders";
+import axios from "../../../Axios/axios-oders";
 import Spinner from "../../../components/UI/Spinner/Spinner";
 import Input from "../../../components/UI/Forms/Input/Input";
 
@@ -81,7 +81,8 @@ class ContactData extends Component {
             { value: "cheapest", displayValue: "Cheapest" },
           ],
         },
-        value: "",
+        value: "fastest",
+        validation: {},
         valid: true,
       },
     },
@@ -143,7 +144,7 @@ class ContactData extends Component {
     for (let identifier in updatedForm) {
       formIsValid = updatedForm[identifier].valid && formIsValid;
     }
-    this.setState({ orderForm: updatedForm, formIsValid: formIsValid });
+    this.setState({ orderForm: updatedForm, formIsValid: true });
   };
 
   render() {
