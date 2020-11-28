@@ -12,8 +12,6 @@ import * as actionTypes from "../../store/actions";
 
 class BurgerBuilder extends Component {
   state = {
-    totalPrice: 4,
-    purchasable: false,
     purchasing: false,
     loading: false,
     error: null,
@@ -39,42 +37,9 @@ class BurgerBuilder extends Component {
         return sum + el;
       }, 0);
 
-    this.setState({ purchasable: sum > 0 });
+    return sum > 0;
   }
-  /* 
-  addIngredientHandler = (type) => {
-    const oldCount = this.props.ings[type];
-    const updatedCount = oldCount + 1;
-    const updatedIngredients = {
-      ...this.props.ings,
-    };
-    updatedIngredients[type] = updatedCount;
-    const priceAddition = INGREDIENT_PRICES[type];
-    const oldPrice = this.props.price;
-    const newPrice = oldPrice + priceAddition;
 
-    this.setState({ ingredients: updatedIngredients, totalPrice: newPrice });
-    this.updatePurchaseState(updatedIngredients);
-  };
-
-  removeIngredientHandler = (type) => {
-    const oldCount = this.props.ings[type];
-    let updatedCount = oldCount - 1;
-    if (updatedCount < 0) {
-      return;
-    }
-    const updatedIngredients = {
-      ...this.props.ings,
-    };
-    updatedIngredients[type] = updatedCount;
-    const priceSubtraction = INGREDIENT_PRICES[type];
-    const oldPrice = this.props.price;
-    const newPrice = oldPrice - priceSubtraction;
-
-    this.setState({ ingredients: updatedIngredients, totalPrice: newPrice });
-    this.updatePurchaseState(updatedIngredients);
-  };
- */
   purchaseHandler = () => {
     this.setState({ purchasing: true });
   };
@@ -124,7 +89,7 @@ class BurgerBuilder extends Component {
             ingredientAdded={this.props.onIngredientAdded}
             ingredientRemoved={this.props.onIngredientRemoved}
             disabledInfo={disabledInfo}
-            purchasable={this.state.purchasable}
+            purchasable={this.updatePurchaseState(this.props.ings)}
             ordered={this.purchaseHandler}
             price={this.props.price}
           />
