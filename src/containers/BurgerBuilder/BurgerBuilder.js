@@ -3,11 +3,7 @@ import Burger from "../../components/Burger/Burger";
 import BuildControls from "../../components/Burger/BuildControls/BuildControls";
 import Modal from "../../components/UI/Modal/Modal";
 import OrderSummary from "../../components/Burger/OrderSummary/OrderSummary";
-<<<<<<< HEAD
 import axios from "../../Axios/axios-oders"
-=======
-import axios from "../../Axios/axios-orders";
->>>>>>> 15d508dc4e6ba5041d004d7820019a3ecbf2e2eb
 import Spinner from "../../components/UI/Spinner/Spinner";
 import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
 import spinner from "../../components/UI/Spinner/Spinner";

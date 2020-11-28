@@ -15,14 +15,11 @@
   padding-left: 0;
 }
 
-<<<<<<< HEAD
 .Button:disabled {
     color: #ccc;
     cursor: not-allowed;
 }
 
-=======
->>>>>>> 15d508dc4e6ba5041d004d7820019a3ecbf2e2eb
 .Success {
   color: #5c9210;
 }
