@@ -15,7 +15,10 @@ const sideDrawer = (props) => {
   return (
     <React.Fragment>
       <Backdrop show={props.open} clicked={props.closeSideDrawer} />
-      <div className={attachedClasses.join(" ")}>
+      <div
+        className={attachedClasses.join(" ")}
+        onClick={props.closeSideDrawer}
+      >
         <nav className={classes.Logo}>
           <Logo />
         </nav>
